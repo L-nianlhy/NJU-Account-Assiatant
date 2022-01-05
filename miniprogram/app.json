@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/personalCenter/personalCenter",
+    "pages/recordList/recordList",
+    "pages/editAccount/editAccount",
+    "pages/addaccount/addcount",
+    "pages/addrecord/addrecord",
+    "pages/editrecord/editrecord",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundColor": "#63065f",
+    "navigationBarBackgroundColor": "#63065f",
+    "navigationBarTitleText": "南哪记账",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#808080",
+    "selectedColor": "#63065f",
+    "list": [
+      {
+        "pagePath": "pages/recordList/recordList",
+        "text": "记账记录",
+        "iconPath": "images/recordList_bold.png",
+        "selectedIconPath": "images/recordList_selected_bold.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/search_bold.png",
+        "selectedIconPath": "images/search_selected_bold.png"
+
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "个人中心",
+        "iconPath": "images/personalCenter_bold.png",
+        "selectedIconPath": "images/personalCenter_selected_bold.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

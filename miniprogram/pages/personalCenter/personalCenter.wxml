@@ -1,0 +1,29 @@
+<!-- 个人中心界面 -->
+<!-- 未登录界面 -->
+<view class = "personalCenterWithoutLogin"  wx:if="{{!openid}}">
+<button class="login" bindtap="login">登录</button>
+<view class = "remind">登录使用更多功能</view>
+</view>
+
+<!-- 登陆后界面 -->
+<view  class="personalCenterWithLogin" wx:if="{{openid}}"> 
+<!--用户信息展示-->
+<view class = "user"> 
+  <open-data class="image" type="userAvatarUrl"></open-data>
+<view>
+<view class="name"><open-data type="userNickName"></open-data></view>
+<view class ="totalBalance">账户总余额：{{totalBalance}}</view>
+</view>
+</view>
+<view class = "block"></view>
+<!-- 添加账户摁钮 -->
+<button class = "addaccountbuttom" bindtap = "gotoaddaccount">添加账户</button>
+<!-- 用户拥有账户展示 -->
+<view class = "account" wx:for="{{account}}" wx:key="index">
+<view>
+<view class = "accountName">{{item.accountname}}</view>
+<view class = "accountBalance">余额：{{item.accountbalance}}</view>
+</view>
+<button class = "editAccountButtom" bindtap="goToEditAccount" data-accountid="{{item._id}}" data-accountname="{{item.accountname}}" data-accountbalance="{{item.accountbalance}}">编辑</button>
+</view>
+</view>

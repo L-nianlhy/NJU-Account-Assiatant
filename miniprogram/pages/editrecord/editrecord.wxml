@@ -1,0 +1,47 @@
+<view wx:if="{{!openid}}">
+<view  class = "nologinremind"> 请前往个人中心进行登录</view>
+<image src = "/images/ad.png" class = "advertising"></image>
+</view>
+<view wx:if="{{openid}}">
+<!-- 账户选择 -->
+<view class = "text">账户:</view>
+  <picker-view indicator-style="height: 50px;" style=" height: 150px;"bindchange="accountChange" value="{{accountindex}}">
+    <picker-view-column>
+      <view wx:for="{{account}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item.accountname}}</view>
+    </picker-view-column>
+  </picker-view>
+<!-- 收支类型 -->
+<view class = "text">收支类型:</view>
+<radio-group class="radio-group" bindchange="iochange">
+    <label class="radio" wx:for="{{ios}}" wx:key = "index">
+        <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+    </label>
+</radio-group>
+<picker-view indicator-style="height: 50px;" style=" height: 150px;"bindchange="typeChange" value="{{typeindex}}">
+    <picker-view-column>
+      <view wx:for="{{types}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+<!-- 记账日期 -->
+<view class = "text">记账日期：</view>
+  <view>
+  <picker-view indicator-style="height: 50px;" style="height: 150px;" value="{{dataindex}}" bindchange="dataChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<!-- 其他信息 -->
+<view class = "text">记账金额:</view>
+<input placeholder='{{balanceremind}}' maxlength="12" type="number"  bindfocus='onfocusbalance' bindblur="onblurbalance" bindinput="oninputbalance"></input>
+<view class = "text">备注：</view>
+<input placeholder='{{messageremind}}' maxlength="12" type="text"  bindfocus='onfocusmessage' bindblur="onblurmessage" bindinput="oninputmessage"></input>
+<button bindtap = "editrecord">保存</button>
+<button bindtap = "deleterecord">删除</button>
+</view>

@@ -1,0 +1,48 @@
+.nologinremind{
+  text-align: center;
+  font-size: 125%;
+  color: gray;
+  margin-top: 20rpx;
+}
+
+.advertising{
+  margin-top: 100rpx;
+  width: 750rpx;
+  height: 850rpx;
+}
+.text{
+  font-weight: bold;
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+}
+input{
+  padding-left:2%;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 50rpx;
+  height: 80rpx;
+  border: #63065f solid 3rpx;
+  border-radius: 20rpx;
+}
+
+button{
+  background-color: #63065f;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #fff;
+}
+picker-view{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 70rpx;
+  height: 100rpx;
+  border: #63065f solid 3rpx;
+}
+radio-group{
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 30rpx;
+}

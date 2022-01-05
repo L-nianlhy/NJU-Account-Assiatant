@@ -1,0 +1,8 @@
+<!-- 添加账户界面 -->
+<view>
+<view class = "text">账户名称：</view>
+<input placeholder='{{nameremind}}' maxlength="12" type="text"  bindfocus='onfocusname' bindblur="onblurname" bindinput="oninputname"></input>
+<view class = "text">账户余额：</view>
+<input placeholder='{{balanceremind}}' maxlength="12" type="number"  bindfocus='onfocusbalance' bindblur="onblurbalance" bindinput="oninputbalance"></input>
+<button bindtap = "addaccount">添加</button>
+</view>

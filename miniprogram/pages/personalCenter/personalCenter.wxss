@@ -1,0 +1,98 @@
+/* page/personalCenter/personalCenter.wxss */
+/* 未登陆界面 */
+.personalCenterWithoutLogin{
+  margin-top: 400rpx;
+}
+/* 用户信息展示 */
+.user{
+  position: fixed;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 750rpx;
+  height: 250rpx;
+  background-color: #63065f;
+  z-index: 10;
+} 
+/* 用户头像 */
+.image{
+  width:150rpx;
+  height: 150rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  border-radius: 50%;
+}
+/* 用户名  */
+.name{
+  font-weight: bold;
+  text-align: left;
+  padding-top: 10rpx;
+  color:white;
+}
+/* 账户总余额 */
+.totalBalance{
+  text-align: left;
+  padding-top: 10rpx;
+  color:white;
+  font-size: 80%;
+}
+/* 登录提示 */
+.remind{
+  text-align: center;
+  font-size: 70%;
+  color: gray;
+}
+/* 登录摁钮 */
+.login{
+  margin-bottom:2%;
+  background: #63065f;
+  width: 80%;
+  margin-top: 20rpx;
+  color: #ffffff;
+}
+/* 用户账户展示 */
+.account{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border:3rpx solid #63065f;
+  height: 150rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #63065f;
+}
+/* 账户名称 */
+.accountName{
+  font-weight: bold;
+  font-size:100%;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  margin-bottom: 5rpx;
+}
+/* 账户余额 */
+.accountBalance{
+  font-size: 80%;
+  margin-left: 30rpx;
+}
+/* 账户编辑摁钮 */
+.editAccountButtom{
+  margin-right: 30rpx;
+  font-size: 70%;
+  background-color: #63065f;
+  color: #ffffff;
+}
+/* 账户添加摁钮 */
+.addaccountbuttom{
+  background-color: #63065f;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #fff;
+}
+.block{
+  margin-bottom: 30rpx;
+  width: 750rpx;
+  height: 250rpx;
+}

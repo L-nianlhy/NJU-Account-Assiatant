@@ -1,0 +1,24 @@
+.text{
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  margin-bottom: 20rpx;
+}
+input{
+  padding-left:2%;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  margin-bottom: 100rpx;
+  height: 80rpx;
+  border: #63065f solid 3rpx;
+  border-radius: 20rpx;
+}
+
+button{
+  background-color: #63065f;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #fff;
+}

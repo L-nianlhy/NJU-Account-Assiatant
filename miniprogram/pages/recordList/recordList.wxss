@@ -1,0 +1,54 @@
+/* page/recordList/recordList.wxss */
+.nologinremind{
+  text-align: center;
+  font-size: 125%;
+  color: gray;
+  margin-top: 20rpx;
+}
+
+.advertising{
+  margin-top: 100rpx;
+  width: 750rpx;
+  height: 850rpx;
+}
+
+/* 记账记录展示 */
+.record{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border:3rpx solid #63065f;
+  height: 200rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #63065f;
+}
+/* 记账类型 */
+.recordtype{
+  font-weight: bold;
+  font-size:100%;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  margin-bottom: 5rpx;
+}
+/* 记账金额 */
+.recordbalance,.recordmessage,.recorddata{
+  font-size: 80%;
+  margin-left: 30rpx;
+}
+/* 记账记录编辑摁钮 */
+.editrecordButtom{
+  margin-right: 30rpx;
+  font-size: 70%;
+  background-color: #63065f;
+  color: #ffffff;
+}
+/* 添加摁钮 */
+.addrecordbuttom{
+  background-color: #63065f;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx 30rpx 30rpx 30rpx;
+  border-radius: 30rpx;
+  color: #fff;
+}

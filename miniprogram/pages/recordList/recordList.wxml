@@ -1,0 +1,18 @@
+<!--page/recordList/recordList.wxml-->
+<view wx:if="{{!openid}}">
+<view  class = "nologinremind"> 请前往个人中心进行登录</view>
+<image src = "/images/ad.png" class = "advertising"></image>
+</view>
+<view wx:if="{{openid}}">
+<!-- 添加摁钮 -->
+<button class = "addrecordbuttom" bindtap = "gotoaddrecord">记账</button>
+<view class = "record" wx:for="{{record}}" wx:key="index">
+<view>
+<view class = "recordtype">{{item.recordtype}}（{{item.recordaccountname}}）</view>
+<view class = "recorddata">日期：{{item.recorddata}}</view>
+<view class = "recordbalance">金额：{{item.recordbalance}}</view>
+<view class = "recordmessage">备注：{{item.recordmessage}}</view>
+</view>
+<button class = "editrecordButtom" bindtap="goToEditrecord" data-recordid="{{item._id}}">编辑</button>
+</view>
+</view>

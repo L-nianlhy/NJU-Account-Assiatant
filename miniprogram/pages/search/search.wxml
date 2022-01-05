@@ -1,0 +1,44 @@
+<!--pages/search/search.wxml-->
+<view wx:if="{{!openid}}">
+<view  class = "nologinremind"> 请前往个人中心进行登录</view>
+<image src = "/images/ad.png" class = "advertising"></image>
+</view>
+<view wx:if="{{openid}}">
+<view class = "text">开始日期：</view>
+  <view>
+  <picker-view indicator-style="height: 50px;" style="height: 150px;" value="{{dataindex}}" bindchange="startdataChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<view class = "text">结束日期：</view>
+  <view>
+  <picker-view indicator-style="height: 50px;" style="height: 150px;" value="{{dataindex}}" bindchange="enddataChange">
+    <picker-view-column>
+      <view wx:for="{{years}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}年</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{months}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}月</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{days}}" wx:key ="index" style="text-align: center; line-height: 50px">{{item}}日</view>
+    </picker-view-column>
+  </picker-view>
+</view>
+<button bindtap = "search">查询</button>
+<view class = "textio">总支出：{{totalout}}</view>
+<view class = "textio">总收入：{{totalin}}</view>
+<view class = "record" wx:for="{{record}}" wx:key="index">
+<view class = "recordtype">{{item.recordtype}}（{{item.recordaccountname}}）</view>
+<view class = "recorddata">日期：{{item.recorddata}}</view>
+<view class = "recordbalance">金额：{{item.recordbalance}}</view>
+<view class = "recordmessage">备注：{{item.recordmessage}}</view>
+</view>
+</view>

@@ -1,0 +1,9 @@
+<!-- 编辑账户界面 -->
+<view>
+<view class = "text">账户名称：</view>
+<input  model:value='{{name}}' maxlength="12" bindinput="empty" type="text"></input>
+<view class = "text">账户余额：</view>
+<input  model:value='{{balance}}' maxlength="12" bindinput="empty" type="number"></input>
+<button bindtap = "editaccount">保存</button>
+<button bindtap = "removeaccount">删除该账户</button>
+</view>
